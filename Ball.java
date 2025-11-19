@@ -15,5 +15,5 @@ public class Ball extends Actor
     public void act()
     {
          Ball actor = new Ball();
-        }
+    }
 }

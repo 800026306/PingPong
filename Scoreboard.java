@@ -2,33 +2,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Scoreboard extends MyWorld
 {
-    private int p=0;
-    private int ai=0;
-    public void pscore()
+    public static int p=0;
+    public static int ai=0;
+    public static boolean pscore()
     {
         p++;
+        return true;
     }
-    public void ascore(){
+    public boolean ascore(){
         ai++;
-    }
-    public int getpscore(){
-        return p;
-    }
-    public int getaiscore(){
-        return ai;
+        return true;
     }
     public void gameover(){
         p=0;
         ai=0;
     }
     public boolean pwin(){
-        if (p==10){
+        if (p == 21){
             return true;
         }
         return false;
     }
     public boolean aiwin(){
-        if (ai==10){
+        if (ai==21){
             return true;
         }
         return false;
