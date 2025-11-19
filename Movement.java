@@ -5,6 +5,7 @@
  * @version (a version number or a date)
  */
 import greenfoot.Actor;
+import greenfoot.GreenfootImage;
 
 public class Movement extends MyWorld 
 {
@@ -14,14 +15,15 @@ public class Movement extends MyWorld
     private double xSpeed;
     private double ySpeed;
     private boolean isTouching;
-    private Actor player;
+    private GreenfootImage object;
     
 
     /**
      * Constructor for objects of class Movement
      */
-    public Movement()
+    public Movement(GreenfootImage object)
     {
+        this.object = object;
     }
 
     /**
@@ -45,5 +47,9 @@ public class Movement extends MyWorld
     
     public double getYSpeed() {
         return ySpeed;
+    }
+    
+    public static void moveUp() {
+        
     }
  }
