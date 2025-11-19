@@ -25,12 +25,6 @@ public class PlayerMovement extends Actor{
       if(Greenfoot.isKeyDown("s")){
           setLocation(getX(),getY()+distance);
       }
-      if(Greenfoot.isKeyDown("a")){
-          setLocation(getX()-distance,getY());
-    }
-    if(Greenfoot.isKeyDown("d")){
-        setLocation(getX()+distance,getY());
-    }
   }
     
     
