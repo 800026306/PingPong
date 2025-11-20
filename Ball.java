@@ -15,5 +15,8 @@ public class Ball extends Actor
     public void act()
     {
          Ball actor = new Ball();
+         GreenfootImage ballImage = getImage();
+         ballImage.scale(100,100);
     }
+
 }
