@@ -1,17 +1,13 @@
 #BlueJ class context
 comment0.target=Scoreboard
 comment1.params=
-comment1.target=void\ pscore()
+comment1.target=boolean\ pscore()
 comment2.params=
-comment2.target=void\ ascore()
+comment2.target=boolean\ ascore()
 comment3.params=
-comment3.target=int\ getpscore()
+comment3.target=void\ gameover()
 comment4.params=
-comment4.target=int\ getaiscore()
+comment4.target=boolean\ pwin()
 comment5.params=
-comment5.target=void\ gameover()
-comment6.params=
-comment6.target=boolean\ pwin()
-comment7.params=
-comment7.target=boolean\ aiwin()
-numComments=8
+comment5.target=boolean\ aiwin()
+numComments=6
