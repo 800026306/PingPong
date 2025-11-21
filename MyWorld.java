@@ -20,12 +20,6 @@ public class MyWorld extends World
         
         Ball gameBall = new Ball();
         addObject(gameBall, 400, 400);
-        
-        paddleUser uPad = new paddleUser();
-        addObject(uPad, 70, 290);
-        
-        paddleBot bPad = new paddleBot();
-        addObject(bPad, 810, 290);
 
     }
     
