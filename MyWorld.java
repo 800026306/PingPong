@@ -19,6 +19,7 @@ public class MyWorld extends World
         prepare();
         addObject(new Ball(), 450, 290);
         
+<<<<<<< HEAD
         // Converting scores to strings
         String playerScoreString = String.valueOf(Scoreboard.playerScore);
         String botScoreString = String.valueOf(Scoreboard.botScore);
@@ -26,6 +27,11 @@ public class MyWorld extends World
         showText(playerScoreString, 350, 50);
         showText(botScoreString, 650, 50); 
         
+=======
+        Ball gameBall = new Ball();
+        addObject(gameBall, 400, 400);
+
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
     }
     
     /**

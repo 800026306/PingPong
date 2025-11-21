@@ -1,16 +1,32 @@
 #Greenfoot project file
 class.Ball.image=ball.png
 class.MyWorld.image=space1.jpg
+class.paddleBot.image=userPaddle.png
+class.paddleUser.image=userPaddle.png
 dependency1.from=MyWorld
 dependency1.to=Ball
 dependency1.type=UsesDependency
+<<<<<<< HEAD
+=======
+dependency2.from=MyWorld
+dependency2.to=paddleUser
+dependency2.type=UsesDependency
+dependency3.from=MyWorld
+dependency3.to=paddleBot
+dependency3.type=UsesDependency
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=1048
+<<<<<<< HEAD
 package.numDependencies=1
 package.numTargets=3
+=======
+package.numDependencies=3
+package.numTargets=7
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -33,19 +49,58 @@ target1.width=120
 target1.x=0
 target1.y=0
 target2.height=70
+<<<<<<< HEAD
 target2.name=PlayerMovement
+=======
+target2.name=paddleUser
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target3.height=70
+<<<<<<< HEAD
 target3.name=MyWorld
+=======
+target3.name=Movement
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
+<<<<<<< HEAD
+=======
+target4.height=70
+target4.name=Scoreboard
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=120
+target4.x=0
+target4.y=0
+target5.height=70
+target5.name=paddleBot
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=120
+target5.x=0
+target5.y=0
+target6.height=70
+target6.name=PlayerMovement
+target6.showInterface=false
+target6.type=ClassTarget
+target6.width=120
+target6.x=0
+target6.y=0
+target7.height=70
+target7.name=MyWorld
+target7.showInterface=false
+target7.type=ClassTarget
+target7.width=120
+target7.x=0
+target7.y=0
+>>>>>>> e987811d5375ea9828dae2900c3cbfe9e1e3b020
 version=3.1.0
 width=1936
 world.lastInstantiated=MyWorld
