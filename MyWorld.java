@@ -22,8 +22,8 @@ public class MyWorld extends World
         String playerScoreString = String.valueOf(Scoreboard.playerScore);
         String botScoreString = String.valueOf(Scoreboard.botScore);
         
-        showText(playerScoreString, 350, 50);
-        showText(botScoreString, 650, 50); 
+        showText(playerScoreString, 300, 50);
+        showText(botScoreString, 600, 50); 
  
         Ball gameBall = new Ball();
         addObject(gameBall, 450, 290);
@@ -41,5 +41,23 @@ public class MyWorld extends World
         GreenfootImage background = getBackground();
         background.setColor(Color.BLACK);
         background.fill();
+    }
+    
+    private void ballMovement(Actor paddleUser, Actor paddleBall, boolean gameRunning) {
+        int xPaddleUser = paddleUser.getX()+10;
+        
+        // Range of constantly-changing values
+        int yMinPaddleUserUpper = paddleUser.getY()-50;
+        int yMinPaddleUserLower = paddleUser.getY()+50;
+        
+        // Change all 10s to speed value
+        int change = -10;
+        while (gameRunning) {
+            if (paddleBall.getX()-28 == xPaddleUser && (paddleBall.getY() >= yMinPaddleUserUpper && paddleBall.getY() <= yMinPaddleUserLower)) {
+                change = 10;
+            }
+            // Make for paddleBot
+            paddleBall.setLocation(paddleBall.getX(), paddleBall.getY()+change);
+        }
     }
 }
