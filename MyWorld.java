@@ -30,6 +30,10 @@ public class MyWorld extends World
         
         paddleUser uPad = new paddleUser(); addObject(uPad, 70, 290); 
         paddleBot bPad = new paddleBot(); addObject(bPad, 810, 290);
+        
+        bomb fbomb = new bomb();
+        int x = (int)(Math.random() * 581);
+        addObject(fbomb, 900, x);
     }
     
     /**
