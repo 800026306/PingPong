@@ -12,8 +12,9 @@ public class bomb extends Actor
      * Act - do whatever the bomb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int speed = 5; 
+    private int speed = -5; 
     private boolean imageScaled = false;
+
     public void act()
     {
         if (!imageScaled)
