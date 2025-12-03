@@ -54,6 +54,7 @@ public class MyWorld extends World
         String botScoreString = String.valueOf(Scoreboard.botScore);
         showText(playerScoreString, 300, 50);
         showText(botScoreString, 600, 50);
+        showText("LEVEL: "+String.valueOf(Scoreboard.level()),450,50);
 
         // Range of constantly-changing values (get current locations in each act cycle)
         int xPaddleUser = uPad.getX() + 10; 
@@ -83,6 +84,7 @@ public class MyWorld extends World
     
         // Move the ball horizontally
         gameBall.setLocation(gameBall.getX() + change, gameBall.getY());
+        
     }
     
     @Override

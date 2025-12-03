@@ -23,6 +23,7 @@ public class Scoreboard extends MyWorld
         }
         return 0;
     }
+
     public static int level(){
         if (playerScore>=14){
             return 3;

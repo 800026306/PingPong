@@ -23,12 +23,12 @@ public class paddleBot extends Actor
         int ballY=Ball.getY();
         if(ballY>getY())
         {
-            setLocation(getX(),getY()+10);
+            setLocation(getX(),getY()+7);
         }
         
         if(ballY<getY())
         {
-            setLocation(getX(),getY()-10);
+            setLocation(getX(),getY()-7);
         }
     }
 }
