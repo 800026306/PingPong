@@ -15,8 +15,12 @@ public class MyWorld extends World
     private Ball gameBall;
     private paddleUser uPad;
     private paddleBot bPad;
-    private int change = -5;
+    private int xChange = -5;
+    private int yChange = 0;
     private boolean isRunning = true;
+    
+    private int playerScore = Scoreboard.playerScore; 
+    private int botScore = Scoreboard.botScore; 
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -75,27 +79,47 @@ public class MyWorld extends World
         // Check collision with User Paddle (left side)
         // Both X position MUST match AND Y position MUST be in range
         if ((gameBall.getX() - 28 <= xPaddleUser) && (gameBall.getY() >= yMinPaddleUserUpper && gameBall.getY() <= yMinPaddleUserLower)) {
-            change = 5; // Change direction to move right
+            xChange = 5; // Change direction to move right
+            if (Greenfoot.isKeyDown("down")) {
+                yChange = -2;
+            }
+            if (Greenfoot.isKeyDown("up")) {
+                yChange = 2;
+            }
         }
     
         // Check collision with Bot Paddle (right side)
         // Both X position MUST match AND Y position MUST be in range
         if ((gameBall.getX() + 28 >= xPaddleBot) && (gameBall.getY() >= yMinPaddleBotUpper && gameBall.getY() <= yMinPaddleBotLower)) {
-            change = -5; // Change direction to move left
+            xChange = -5; // Change direction to move left
+            if (Greenfoot.isKeyDown("down")) {
+                yChange = -2;
+            }
+            if (Greenfoot.isKeyDown("up")) {
+                yChange = 2;
+            }
         }
         
         // Check if the ball goes off the side walls
         if (gameBall.getX() + 28 > 900) {
-            (Scoreboard.botScore)++;
+            playerScore++;
+            showText(String.valueOf(playerScore), 300, 50);
             isRunning = false;
         }
         if (gameBall.getX() - 28 < 0) { // Check both boundaries
-            (Scoreboard.playerScore)++;
+            botScore++;
+            showText(String.valueOf(botScore), 600, 50);
             isRunning = false; // Game over
+        }
+        if (gameBall.getY() - 28 < 0) {
+            yChange = 2;
+        }
+        if (gameBall.getY() + 28 > 600) {
+            yChange = -2;
         }
     
         // Move the ball horizontally
-        gameBall.setLocation(gameBall.getX() + change, gameBall.getY());
+        gameBall.setLocation(gameBall.getX() + xChange, gameBall.getY() + yChange);
     }
     
     @Override
