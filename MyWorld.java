@@ -15,6 +15,7 @@ public class MyWorld extends World
     private Ball gameBall;
     private paddleUser uPad;
     private paddleBot bPad;
+    private start startButton;
     private int xChange = -5;
     private int yChange = 0;
     private boolean isRunning = true;
@@ -34,7 +35,6 @@ public class MyWorld extends World
         addObject(uPad, 70, 290);
         bPad = new paddleBot();
         addObject(bPad, 810, 290);
-<<<<<<< HEAD
 
         // Randomly spawning in bombs
         bomb fbomb = new bomb();
@@ -43,10 +43,9 @@ public class MyWorld extends World
         
         paddleUser uPad = new paddleUser(); addObject(uPad, 70, 290); 
         paddleBot bPad = new paddleBot(); addObject(bPad, 810, 290);
-=======
-        s=new start();
-        addObject(s, 450,290);
->>>>>>> a0acac6560353686e8d035dbe5c587f4ad72cfbf
+        
+        startButton = new start();
+        addObject(startButton, 450,290);
     }
     
     /**
@@ -125,12 +124,7 @@ public class MyWorld extends World
         }
     
         // Move the ball horizontally
-<<<<<<< HEAD
         gameBall.setLocation(gameBall.getX() + xChange, gameBall.getY() + yChange);
-=======
-        gameBall.setLocation(gameBall.getX() + change, gameBall.getY());
-        
->>>>>>> 3b8a9d51005b371b7803f1d3ef67b5ff272b61f3
     }
     
     @Override
