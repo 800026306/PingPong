@@ -23,14 +23,10 @@ public class Scoreboard extends MyWorld
         }
         return 0;
     }
-<<<<<<< HEAD
+
     public static int level() {
         if (playerScore >= 14){
-=======
 
-    public static int level(){
-        if (playerScore>=14){
->>>>>>> 3b8a9d51005b371b7803f1d3ef67b5ff272b61f3
             return 3;
         }
         if (playerScore >= 7){
