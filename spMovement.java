@@ -1,14 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.World;
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class spmovement here.
  * 
- * @author Shubhay Shah
- * @version 1.0.0
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-
-public class MyWorld extends World
+public class spMovement extends MyWorld
 {
-    // ... all your private variables (gameBall, uPad, bPad, isRunning, etc.) ...
+    /**
+     * Act - do whatever the spmovement wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     private Ball gameBall;
     private paddleUser uPad;
     private paddleBot bPad;
@@ -18,67 +21,11 @@ public class MyWorld extends World
     private int xChange = -5;
     private int yChange = 0;
     private boolean isRunning = false;
-    public static boolean mptrue = false;
-    public static boolean sptrue = false;
     private int playerScore = Scoreboard.playerScore; 
     private int botScore = Scoreboard.botScore;
-
-    public MyWorld()
-    {    
-        super(900, 580, 1);
-        prepare(); // Sets up background, etc.
-
-        // Initial setup for the start screen
-        
-    }
-    
-    /**
-     * Prepare the world for the start of the program.
-     */
-    private void prepare()
+    public void act()
     {
-        GreenfootImage background = getBackground();
-        background.setColor(Color.BLACK);
-        background.fill();
-    }
-    
-    private void startGame() {
-        isRunning = true;
-
-        // Initialize and add objects (moved from the constructor)
-        gameBall = new Ball();
-        addObject(gameBall, 450, 290);
-        uPad = new paddleUser();
-        addObject(uPad, 70, 290);
-        bPad = new paddleBot();
-        addObject(bPad, 810, 290);
-        multiButton=new mpbutton();
-        addObject(multiButton,673,290);
-        singleButton=new spbutton();
-        addObject(singleButton,222,290);
-        prize=new trophy();
-
-        // Randomly spawning in bombs
-        bomb fbomb = new bomb();
-        int x = (int)(Math.random() * 581);
-        addObject(fbomb, 900, x);
-    }
-
-    public void act() {
-        if (!isRunning && Greenfoot.isKeyDown("space")) {
-            startGame(); // Call the method to set up and start the game
-        }
-        
-        if (!isRunning) {
-            return; // Exit act() immediately if game isn't running
-        } 
-        if(mptrue == true){
-            //call multi mode
-        }
-        else if(sptrue == true){
-            //call single
-        }
-        // Converting scores to strings and displaying
+           // Converting scores to strings and displaying
         // Converting scores to strings and displaying (can be updated here if scores change)
         String playerScoreString = String.valueOf(Scoreboard.playerScore);
         String botScoreString = String.valueOf(Scoreboard.botScore);
@@ -137,22 +84,10 @@ public class MyWorld extends World
             yChange = -2;
         }
         if (Scoreboard.gameOver()==1){
-            showText("You won the Tournament!!!!",450,50);
+            showText("You won the Tournament!",450,50);
             addObject(prize,450,290);
         }
         // Move the ball horizontally
         gameBall.setLocation(gameBall.getX() + xChange, gameBall.getY() + yChange);
     }
-    
-    // Remove or comment out the default started/stopped overrides which interfere with manual control
-    // @Override
-    // public void started() {
-    //     isRunning = true; 
-    // }
-    
-    // @Override
-    // public void stopped() {
-    //     isRunning = false;
-    // }
-    
 }

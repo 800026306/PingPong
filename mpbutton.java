@@ -18,5 +18,8 @@ public class mpbutton extends Actor
         mpbutton actor=new mpbutton();
         GreenfootImage mpImage=getImage();
         mpImage.scale(450,300);
+         if(Greenfoot.mouseClicked(this)){
+            MyWorld.mptrue = true;
+        }
     }
 }
