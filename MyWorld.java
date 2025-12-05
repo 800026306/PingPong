@@ -14,12 +14,13 @@ public class MyWorld extends World
     private paddleBot bPad;
     private mpbutton mpbutt;
     private spbutton spbutt;
+    private trophy prize;
     private int xChange = -5;
     private int yChange = 0;
     private boolean isRunning = false;
     
     private int playerScore = Scoreboard.playerScore; 
-    private int botScore = Scoreboard.botScore; 
+    private int botScore = Scoreboard.botScore;
 
     public MyWorld()
     {    
@@ -54,6 +55,7 @@ public class MyWorld extends World
         addObject(mpbutt,673,290);
         spbutt=new spbutton();
         addObject(spbutt,222,290);
+        prize=new trophy();
 
         // Randomly spawning in bombs
         bomb fbomb = new bomb();
@@ -128,7 +130,10 @@ public class MyWorld extends World
         if (gameBall.getY() + 28 > 600) {
             yChange = -2;
         }
-    
+        if (Scoreboard.gameOver()==1){
+            showText("You won the Tournament!!!!",450,50);
+            addObject(prize,450,290);
+        }
         // Move the ball horizontally
         gameBall.setLocation(gameBall.getX() + xChange, gameBall.getY() + yChange);
     }
