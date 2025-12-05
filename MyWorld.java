@@ -12,7 +12,8 @@ public class MyWorld extends World
     private Ball gameBall;
     private paddleUser uPad;
     private paddleBot bPad;
-    private start startButton;
+    private mpbutton mpbutt;
+    private spbutton spbutt;
     private int xChange = -5;
     private int yChange = 0;
     private boolean isRunning = false;
@@ -26,8 +27,7 @@ public class MyWorld extends World
         prepare(); // Sets up background, etc.
 
         // Initial setup for the start screen
-        startButton = new start();
-        addObject(startButton, 450,290);
+        
     }
     
     /**
@@ -42,7 +42,6 @@ public class MyWorld extends World
     
     private void startGame() {
         isRunning = true;
-        removeObject(startButton); // Remove the start button/text
 
         // Initialize and add objects (moved from the constructor)
         gameBall = new Ball();

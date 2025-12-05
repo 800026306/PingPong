@@ -15,5 +15,8 @@ public class mpbutton extends Actor
     public void act()
     {
         // Add your action code here.
+        mpbutton actor=new mpbutton();
+        GreenfootImage startImage=getImage();
+        startImage.scale(450,300);
     }
 }
