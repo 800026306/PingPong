@@ -50,6 +50,10 @@ public class MyWorld extends World
         addObject(uPad, 70, 290);
         bPad = new paddleBot();
         addObject(bPad, 810, 290);
+        mpbutt=new mpbutton();
+        addObject(mpbutt,673,290);
+        spbutt=new spbutton();
+        addObject(spbutt,222,290);
 
         // Randomly spawning in bombs
         bomb fbomb = new bomb();

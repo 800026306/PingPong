@@ -16,7 +16,7 @@ public class spbutton extends Actor
     {
         // Add your action code here.
         spbutton actor=new spbutton();
-        GreenfootImage startImage=getImage();
-        startImage.scale(450,300);
+        GreenfootImage spImage=getImage();
+        spImage.scale(450,300);
     }
 }
